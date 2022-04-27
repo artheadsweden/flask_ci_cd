@@ -3,7 +3,7 @@ Unittest for users route
 """
 
 import json
-from .fixture import client
+from fixture import client
 
 
 

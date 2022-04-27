@@ -2,7 +2,7 @@
 Fixture for tests
 """
 
-from ..app import create_app
+from flask.app import create_app
 import pytest
 
 
