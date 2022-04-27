@@ -2,7 +2,6 @@
 Main Flask app file
 """
 
-import dotenv
 from app.blueprints.open import bp_open
 from app.blueprints.api import bp_api
 from flask import Flask
@@ -20,6 +19,3 @@ def create_app():
     _app.register_blueprint(bp_api, url_prefix='/api/v1.0')
 
     return _app
-
-dotenv.load_dotenv()
-app = create_app()

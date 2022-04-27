@@ -32,6 +32,7 @@ users = [
     },
 ]
 
+
 @bp_api.get('/users')
 def users_get():
     """
