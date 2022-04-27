@@ -6,8 +6,8 @@ services:
     restart: always
     build:
       context: .
-      dockerfile: ./flask/Dockerfile
-    command: ./flask/docker-entrypoint-flask.sh
+      dockerfile: ./flask_api/Dockerfile
+    command: ./flask_api/docker-entrypoint-flask.sh
 
 
   dnfm_nginx:
