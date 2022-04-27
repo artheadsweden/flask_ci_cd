@@ -1,0 +1,24 @@
+version: "3.0"
+
+services:
+  dnfm_flaskapp:
+    container_name: "my-flask-app"
+    restart: always
+    build:
+      context: .
+      dockerfile: ./flask/Dockerfile
+    command: ./flask/docker-entrypoint-flask.sh
+
+
+  dnfm_nginx:
+    container_name: "my-nginx"
+    image: nginx
+    restart: always
+    build:
+      context: .
+      dockerfile: ./nginx/Dockerfile
+    ports:
+      - 80:80
+    depends_on:
+      - dnfm_flaskapp
+
